@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+/************************************/
+/*          topページ               */
+/************************************/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Yu Gothic", sans-serif;
+	line-height: 1.6;
+}
+
+header {
+/*	background: #0d47a1;*/
+	background:#333;
+	color: white;
+	padding: 20px 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 20px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+.hero {
+	height: 500px;
+	background: linear-gradient(rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.5)),
+		url("../img/img-town.jpg");
+	/*		    url("https://picsum.photos/1600/800");*/
+	background-size: cover;
+	background-position: center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.hero-content {
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.hero p {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+/*.hero button {*/
+/*	padding: 15px 30px;*/
+/*	border: none;*/
+/*	background: #ff9800;*/
+/*	color: white;*/
+/*	font-size: 16px;*/
+/*	cursor: pointer;*/
+/*}*/
+
+.hero a {
+	padding: 15px 30px;
+	border: none;
+	background: #ff9800;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+section {
+	padding: 80px 60px;
+}
+
+section h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.cards {
+	display: flex;
+	gap: 20px;
+}
+
+.card {
+	flex: 1;
+	border: 1px solid #ddd;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.course {
+	border: 1px solid #ddd;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+.detail {
+	display: none;
+	background: #f5f5f5;
+	margin-top: 15px;
+	padding: 15px;
+}
+
+/*.detailBtn {*/
+/*	margin-top: 10px;*/
+/*	padding: 10px 20px;*/
+/*	cursor: pointer;*/
+/*}*/
+
+.detail-expansion {
+	width: 140px;
+/*	border:1px solid;*/
+	margin-top: 10px;
+	padding: 10px 20px;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+footer {
+	background: #222;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+
+
+
+
+/************************************/
+/*       ナビゲーション             */
+/************************************/
+
+.menu {
+	display: flex;
+	list-style: none;
+	background: #333;
+}
+
+.menu li {
+	position: relative;
+}
+
+.menu a {
+	display: block;
+	padding: 15px 25px;
+	color: white;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	background: #555;
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	list-style: none;
+	background: #444;
+	min-width: 180px;
+}
+
+.submenu a {
+	padding: 10px;
+}
+
+
+
+/************************************/
+/*       問い合わせ                 */
+/************************************/
+
+#inquiry-body {
+	font-family: sans-serif;
+	background: #f5f5f5;
+	margin: 0;
+}
+
+.container {
+	max-width: 700px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	background: white;
+	padding: 30px;
+	border-radius: 8px;
+}
+
+#inquiry-heading {
+	text-align: center;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.radio-group {
+	display: flex;
+	gap: 20px;
+}
+
+.radio-group label {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.agreement {
+	margin: 20px 0;
+}
+
+button {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	background: #0078d4;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+button:disabled {
+	background: #999;
+	cursor: not-allowed;
+}

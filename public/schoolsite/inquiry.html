@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>問い合わせ</title>
+	<link rel="stylesheet" href="schoolsite.css">
+	<script src="schoolsite.js" defer></script>
+</head>
+<body id="inquiry-body">
+	<!-- ヘッダー -->
+	<header>
+		<div class="logo">Aimax IT SCHOOL</div>
+		<nav>
+			<ul class="menu">
+				<li><a href="top.html">ホーム</a></li>
+				<li class="dropdown">
+					<a href="#">研修情報</a>
+					<ul class="submenu">
+						<li><a href="top.html#java">Java研修</a></li>
+						<li><a href="top.html#python">Python研修</a></li>
+					</ul>
+				</li>
+				<li><a href="#">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- 問い合わせフォーム -->
+	<div class="container">
+		<h1 id="inquiry-heading">お問い合わせ</h1>
+		<form id="contactForm" action="#">
+			<div class="form-group">
+				<label>お客様区分</label>
+				<div class="radio-group">
+					<label>
+						<input type="radio" name="customerType" value="individual" checked>
+						個人
+					</label>
+					<label>
+						<input type="radio" name="customerType" value="company">
+						法人
+					</label>
+				</div>
+			</div>
+
+			<!-- 個人用 -->
+			<div id="individualFields">
+				<div class="form-group">
+					<label for="name">氏名</label>
+					<input type="text" id="name">
+				</div>
+			</div>
+
+			<!-- 法人用 -->
+			<div id="companyFields" style="display:none">
+				<div class="form-group">
+					<label for="companyName">会社名</label>
+					<input type="text" id="companyName">
+				</div>
+				<div class="form-group">
+					<label for="personName">担当者名</label>
+					<input type="text" id="personName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="email">メールアドレス</label>
+				<input type="email" id="email">
+			</div>
+			<div class="form-group">
+				<label for="course">
+					お問い合わせ内容
+				</label>
+				<select id="course">
+					<option>Java研修</option>
+					<option>Python研修</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="message">詳細</label>
+				<textarea id="message" rows="5"></textarea>
+			</div>
+			<div class="agreement">
+				<label>
+					<input type="checkbox" id="agree">
+					個人情報保護方針に同意する
+				</label>
+			</div>
+			<button id="submitBtn" disabled>
+				送信する
+			</button>
+		</form>
+	</div>
+	
+	<!-- フッター -->
+	<footer>
+		<p>© 2020 Aimax IT SCHOOL</p>
+	</footer>
+</body>
+</html>
